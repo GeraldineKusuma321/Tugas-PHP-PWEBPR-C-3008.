@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
 
 	<title>Register Beauty Charm </title>
 </head>
-<body  style="background-image: 2.jpg;">
+<body  style="background-image: 1.jpg;">
 	<div class="container">
 		<form action="" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
