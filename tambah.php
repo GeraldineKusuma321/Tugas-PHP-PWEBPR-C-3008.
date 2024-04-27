@@ -16,7 +16,7 @@ if (isset($_POST['tambah'])) {
     move_uploaded_file($image_temp, "kosmetik/".$image);
 
     $query = "INSERT INTO crud (date, name, hp, deskripsi, ammount, status, image) 
-              VALUES ('$date', '$name', '$hp', '$deskripsi', '$ammount', '$status', '$image')";
+              VALUES ('$date', '$name', '$hp', '$deskripsi', '$ammount', '$status', '$image_temp')";
     $query_run = mysqli_query($conn, $query);
 
     if ($query_run) {
@@ -50,7 +50,7 @@ if (isset($_POST['tambah'])) {
                 <form action="code.php" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="date">Date</label>
-                        <input type="date" name="date" id="date">
+                        <input type="text" name="date" id="date">
                     </div>
                     <div class="mb-3">
                         <label for="name">Name</label>

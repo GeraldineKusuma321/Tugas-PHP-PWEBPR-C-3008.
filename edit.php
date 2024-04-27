@@ -70,10 +70,10 @@ if(isset($_POST['update'])) {
             </div>
             <div class="card-body">
                 <form action="edit.php" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<?= $crud['id']; ?>">
+                    <input type="hidden" name="student_id" value="<?= $crud['id']; ?>">
                     <div class="mb-3">
                         <label for="date">Date</label>
-                        <input type="date" name="date" value="<?= $crud['date']; ?>" class="form-control">
+                        <input type="text" name="date" value="<?= $crud['date']; ?>" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="name">Name</label>
