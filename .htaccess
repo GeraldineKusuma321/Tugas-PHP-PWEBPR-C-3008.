@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /tugas-2-crud-gerald/
+RewriteRule ^index\\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /tugas-2-crud-gerald/index.php [L]

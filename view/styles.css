@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(249, 214, 214);
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 13px;
+  background: #ca3368;
+  position: relative;
+  top: -10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  color: #000;
+  font-size: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 2rem 8rem 2rem 2rem;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+}
+
+.search_box input {
+  padding: 9px;
+  width: 300px;
+  background: rgb(228, 228, 228);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 5px;
+}
+
+.search_box i {
+  padding: 1rem;
+  cursor: pointer;
+  color: #fff;
+  background: #d9b8c4;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons i {
+  margin-right: auto;
+}
+
+.header-icons .account h3 {
+  margin-right: auto; 
+}
+
+.header-icons .account {
+  width: -100x;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-icons .account img {
+  width: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* Side menubar  */
+nav {
+  background: #fff;
+  margin: 0;
+}
+
+.side_navbar {
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side_navbar span {
+  color: gray;
+  margin: 1rem 3rem;
+  font-size: 12px;
+}
+
+.side_navbar a {
+  width: 100%;
+  padding: 0.8rem 3rem;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(100, 100, 100);
+}
+
+/* Main Body Section */
+.main-body {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.welcome {
+  width: 100%;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 0.5rem 1rem 1rem 3rem;
+  background: rgb(226, 141, 174);
+}
+
+.welcome h1,
+.welcome span,
+button {
+  margin: 10px;
+}
+
+.welcome button {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.history_lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+table {
+  background: #fff;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+table td,
+th {
+  padding: 0.2rem 0.8rem;
+}
+
+table th {
+  font-size: 15px;
+}
+
+table td {
+  font-size: 13px;
+  color: rgb(100, 100, 100);
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.btn-primary {
+  background-color: #007bff; 
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; 
+}
+
+.btn-success {
+  background-color: #28a745; 
+  color: #fff;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #218838; 
+}
+
+.btn-danger {
+  background-color: #dc3545; 
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333; 
+}
