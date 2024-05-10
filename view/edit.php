@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>EDIT DATA 
-                    <a href="dashboard.php" class="btn btn-danger float-end">KEMBALI</a>
+                    <a href="<?= urlpath('dashb') ?>" class="btn btn-danger float-end">KEMBALI</a>
                 </h4>
             </div>
             <div class="card-body">

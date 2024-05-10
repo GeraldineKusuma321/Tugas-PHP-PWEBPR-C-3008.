@@ -37,7 +37,7 @@ class KosmetikController{
     static function edit() {
         view('edit', [
             'url' => 'edit',
-            'kosmetik' => KosmetikModel::select($_GET['id'])
+            'kosmetik' => KosmetikModel::select()
         ]);
     }
 
