@@ -1,3 +1,13 @@
+<?php
+// Lakukan proses logout jika tombol logout ditekan
+if(isset($_POST['logout'])) {
+    session_unset(); 
+    session_destroy(); 
+    header("Location: index.php"); 
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +43,11 @@
                 <a href="#" class="active">Dashboard</a>
                 <a href="#">Profile</a>
                 <a href="#">History</a>
+            </div>
+            <div class="logout-section">
+                <form action="<?= urlpath('logout') ?>" method="POST">
+                    <button type="submit" name="logout" class="logout-btn">Logout</button>
+                </form>
             </div>
         </nav>
 

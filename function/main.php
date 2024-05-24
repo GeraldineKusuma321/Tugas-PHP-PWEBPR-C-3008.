@@ -5,7 +5,7 @@ function view($page, $data=[]) {
 }
 
 class Router { 
-    public static $urls = [];
+    public static $urls = ['routes' => [], 'GET' => [], 'POST' => []]; 
 
     function __construct() {
         $url = implode("/", 
@@ -20,10 +20,15 @@ class Router {
         
         if (!in_array($url, self::$urls['routes'])) {
             header('Location: '.BASEURL);
+            exit(); 
         }
 
-        $call = self::$urls[$_SERVER['REQUEST_METHOD']][$url];
-        $call();
+        if(isset(self::$urls[$_SERVER['REQUEST_METHOD']][$url])) {
+            $call = self::$urls[$_SERVER['REQUEST_METHOD']][$url];
+            $call();
+        } else {
+            echo "404 Not Found";
+        }
     }
 
     public static function url($url, $method, $callback) {
@@ -37,4 +42,13 @@ class Router {
 function urlpath($path) {
     require_once 'config/static.php';
     return BASEURL.BASEDIR.$path;
+}
+
+function freshdb() {
+    require_once 'model/user_model.php';
+    User::register([
+        'name' => $_ENV['NAME'],
+        'email' => $_ENV['EMAIL'],
+        'password' => $_ENV['PASSWORD']
+    ]);
 }

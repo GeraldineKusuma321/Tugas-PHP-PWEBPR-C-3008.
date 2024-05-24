@@ -1,13 +1,11 @@
 <?php
 
-include 'config.php';
-
 error_reporting(0);
 
 session_start();
 
 if (isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: dashb.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -51,13 +49,13 @@ if (isset($_POST['submit'])) {
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="view/auth_page/style.css">
 
 	<title>Register Beauty Charm </title>
 </head>
-<body  style="background-image: 1.jpg;">
+<body  style="background-image: 1.png;">
 	<div class="container">
-		<form action="" method="POST" class="login-email">
+		<form action="<?= urlpath('register'); ?>" method="POST" class="login-email">
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
 			<div class="input-group">
 				<input type="text" placeholder="Username" name="username" value="<?php echo $username;?>">
@@ -74,7 +72,7 @@ if (isset($_POST['submit'])) {
 			<div class="input-group">
 				<button name="submit" class="btn">REGISTER</button>
 			</div>
-			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
+			<p class="login-register-text">Have an account? <a href="<?=BASEURL?>"></a> <a href="<?= urlpath('index'); ?>">Login</a>.</p>
 		</form>
 	</div>
 </body>
